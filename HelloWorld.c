@@ -11,7 +11,13 @@ int main() {
     printf("One \t Two \t Three\n\n"); //\t is for adding a tab
     
     //create a 3x3 matrics using Escape sequence
-    printf("1\t2\t3\n4\t5\t6\n7\t8\t9\n");
+    printf("1\t2\t3\n4\t5\t6\n7\t8\t9\n\n");
+
+    //To escape a double or single quotes use one backslash
+    printf("\"I love JESUS\" he's my friend\n\n");
+
+    //To escape a backslash use a backslash too
+    printf("Hello\\World\n");
 }
 
-// Note that the escape character must be inside the qoute"" not outside it
+// Note that the escape character must be inside the qoute"" not outside it 
