@@ -1,24 +1,28 @@
 #include <stdio.h>
+#include "main.h"
 
-void modif_my_param(int *m)
+/**
+ * swap_int - function for the program
+ * @*a: first parameter
+ * @*b: second parameter
+ */
+
+void swap_int(int *a, int *b)
 {
-    printf("value of 'm': %p \n", m);
-    printf("Address of 'm': %p \n", &m);
-    *m = 402;
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
 int main(void)
 {
-    int n;
-    int *p;
+    int a;
+    int b;
 
-    p = &n;
-    n =98;
-    printf("Value of 'n' before the call: %d \n", n );
-    printf("Address of 'n': %p \n", &n);
-    printf("Value of 'p' before the call: %d \n", p );
-    printf("Address of 'p': %p \n", &p);
-    modif_my_param(p);
-    printf("Value of 'n' after the call: %d\n", n);
+    a = 98;
+    b = 42;
+    printf("a=%d, b=%d\n", a, b);
+    swap_int(&a, &b);
+    printf("a=%d, b=%d\n", a, b);
     return (0);
 }
